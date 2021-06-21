@@ -1,0 +1,28 @@
+[project]
+name = "maturin-sample"
+classifiers = [
+    "Programming Language :: Rust"
+]
+description = "python bindings for maturin sample project"
+readme = "README.md"
+license = { file = "LICENSE" }
+
+# create virtualenv by poetry but build wheels by maturin
+# do not use "poetry build"
+[tool.poetry]
+authors = []
+description = "maturin sample project (poetry)"
+name = "maturin-sample"
+version = "0.1.0"
+
+[tool.poetry.dependencies]
+python = ">=3.6.2,<4.0"
+
+[tool.poetry.dev-dependencies]
+black = "^21.6b0"
+isort = "^5.8.0"
+maturin = ">=0.10,<0.11"
+
+[build-system]
+requires = ["maturin>=0.10,<0.11"]
+build-backend = "maturin"

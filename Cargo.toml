@@ -1,0 +1,22 @@
+[package]
+name = "maturin-sample"
+version = "0.1.0"
+authors = ["selpo <planet_selpo@yahoo.co.jp>"]
+edition = "2018"
+license-file = "LICENSE"
+description = "maturin sample project"
+repository = "https://github.com/selpoG/maturin-sample"
+readme = "README.md"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "maturin_sample"
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+
+[dependencies.pyo3]
+version = "0.13.2"
+features = ["extension-module"]
